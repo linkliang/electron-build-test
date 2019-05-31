@@ -47,8 +47,6 @@ function createVersionWindow () {
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
-  autoUpdater.checkForUpdates()
-  console.log("checked for updates")
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

@@ -12,5 +12,9 @@
   <script>
     var pjson = require('../package.json');
     document.getElementById("version").innerHTML = "verion: " + pjson.version;
+
+    const {autoUpdater} = require("electron-updater")
+    autoUpdater.checkForUpdates()
+    console.log("checked for updates")
   </script>
 </html>
