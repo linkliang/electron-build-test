@@ -1,0 +1,76 @@
+{
+  "name": "electron",
+  "version": "0.0.4",
+  "description": "packaging&auto-update",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "build",
+    "publish-win": "build --win --publish always",
+    "publish-mac": "build --mac --publish always",
+    "publish-linux": "build --linux --publish always",
+    "publish": "build --win --mac --linux --publish always"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "QuantConnect",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^5.0.0",
+    "electron-builder": "^20.39.0",
+    "readline-sync": "^1.4.9"
+  },
+  "build": {
+    "appId": "com.quantconnect.leanux",
+    "copyright": "Copyright © 2019 QuantConnect",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "images/icon.png",
+      "sign": "./sign.js",
+      "certificateSubjectName": "QuantConnect",
+      "publish": {
+        "provider": "s3",
+        "bucket": "skylight.quantconnect.com",
+        "acl": "public-read",
+        "region": "us-east-1",
+        "path": "{{branch_name}}/win"
+      }
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "images/icon.png",
+      "publish": {
+        "provider": "s3",
+        "bucket": "skylight.quantconnect.com",
+        "acl": "public-read",
+        "region": "us-east-1",
+        "path": "{{branch_name}}/mac"
+      }
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "images/icon.png",
+      "publish": {
+        "provider": "s3",
+        "bucket": "skylight.quantconnect.com",
+        "acl": "public-read",
+        "region": "us-east-1",
+        "path": "{{branch_name}}/linux"
+      }
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.6"
+  }
+}

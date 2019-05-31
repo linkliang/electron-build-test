@@ -1,0 +1,5 @@
+provider: s3
+bucket: qc-electron-test
+acl: public-read
+path: /win
+updaterCacheDirName: electron-quick-start-updater
