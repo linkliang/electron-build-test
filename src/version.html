@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Version</title>
+  </head>
+  <body>
+    <h1>Version:</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <p id="version"></p>
+  </body>
+  <script>
+    var pjson = require('../package.json');
+    document.getElementById("version").innerHTML = "verion: " + pjson.version;
+  </script>
+</html>
