@@ -9,7 +9,7 @@
     "publish-win": "build --win --publish always",
     "publish-mac": "build --mac --publish always",
     "publish-linux": "build --linux --publish always",
-    "publish": "build --win --mac --linux --publish always"
+    "publish": "build --linux --publish always"
   },
   "keywords": [
     "Electron",
