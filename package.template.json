@@ -35,7 +35,6 @@
       "target": "NSIS",
       "artifactName": "${productName}_v${version}.${ext}",
       "icon": "images/icon.png",
-      "forceCodeSigning": true,
       "sign": "./win-sign.js",
       "publish": {
         "provider": "s3",
@@ -52,7 +51,6 @@
       ],
       "artifactName": "${productName}_v${version}.${ext}",
       "icon": "images/icon.png",
-      "forceCodeSigning": true,
       "publish": {
         "provider": "s3",
         "bucket": "skylight.quantconnect.com",
@@ -65,7 +63,6 @@
       "target": "AppImage",
       "artifactName": "${productName}_v${version}.${ext}",
       "icon": "images/icon.png",
-      "forceCodeSigning": false,
       "publish": {
         "provider": "s3",
         "bucket": "skylight.quantconnect.com",
