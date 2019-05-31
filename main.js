@@ -85,6 +85,7 @@ function createTray(){
 app.on('ready', function(){
   createTray()
   autoUpdater.checkForUpdates()
+  console.log("checked for updates")
 })
 app.on('window-all-closed', () => {
 })
