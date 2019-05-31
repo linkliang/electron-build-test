@@ -10,6 +10,7 @@
     <p id="version"></p>
   </body>
   <script>
+    require('../renderer.js')
     var pjson = require('../package.json');
     document.getElementById("version").innerHTML = "verion: " + pjson.version;
   </script>
