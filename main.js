@@ -88,7 +88,7 @@ function createTray(){
 // Some APIs can only be used after this event occurs.
 app.on('ready', function(){
   createTray()
-  autoUpdater.checkForUpdates()
+  //autoUpdater.checkForUpdates()
 })
 app.on('window-all-closed', () => {
 })
