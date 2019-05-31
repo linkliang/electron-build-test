@@ -1,6 +1,6 @@
 // Modules to control application life and create native browser window
 const {app, Menu, BrowserWindow, Tray} = require('electron')
-const {autoUpdater} = require("electron-updater")
+const autoUpdater = require('./auto-updater')
 const path = require('path')
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -54,6 +54,10 @@ function createVersionWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
+  })
+
+  mainWindow.webContents.on('did-finish-load', () => {
+    autoUpdater.init(mainWindow)
   })
 }
 
