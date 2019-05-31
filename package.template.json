@@ -65,6 +65,7 @@
       "target": "AppImage",
       "artifactName": "${productName}_v${version}.${ext}",
       "icon": "images/icon.png",
+      "forceCodeSigning": false,
       "publish": {
         "provider": "s3",
         "bucket": "skylight.quantconnect.com",
