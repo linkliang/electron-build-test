@@ -1,6 +1,6 @@
 {
   "name": "electron",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "packaging&auto-update",
   "main": "main.js",
     "scripts": {

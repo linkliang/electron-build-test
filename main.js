@@ -46,7 +46,9 @@ function createVersionWindow () {
   mainWindow.loadFile('src/version.html')
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
+  autoUpdater.checkForUpdates()
+  console.log("checked for updates")
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -84,7 +86,6 @@ function createTray(){
 // Some APIs can only be used after this event occurs.
 app.on('ready', function(){
   createTray()
-  mainWindow.webContents.openDevTools()
   autoUpdater.checkForUpdates()
 })
 app.on('window-all-closed', () => {
