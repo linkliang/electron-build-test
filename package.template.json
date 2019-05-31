@@ -35,7 +35,7 @@
     "icon": "images/icon.png",
     "publish": {
       "provider": "s3",
-      "bucket": "qc-electron-test",
+      "bucket": "skylight.quantconnect.com",
       "acl": "public-read",
       "region": "us-east-1",
       "path": "/win"
@@ -60,7 +60,7 @@
       "icon": "images/icon.png",
       "publish": {
         "provider": "s3",
-        "bucket": "qc-electron-test",
+        "bucket": "skylight.quantconnect.com",
         "acl": "public-read",
         "region": "us-east-1",
         "path": "/linux"
