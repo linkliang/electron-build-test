@@ -1,6 +1,6 @@
 {
   "name": "electron-quick-start",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "packaging&auto-update",
   "main": "main.js",
   "scripts": {
