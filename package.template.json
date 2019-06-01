@@ -1,6 +1,6 @@
 {
   "name": "electron-quick-start",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "packaging&auto-update",
   "main": "main.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "publish-win": "build --win --publish always",
     "publish-mac": "build --mac --publish always",
     "publish-linux": "build --linux --publish always",
-    "publish": "build --linux --publish always"
+    "publish": "build --win --mac --linux --publish always"
   },
   "keywords": [
     "Electron",
