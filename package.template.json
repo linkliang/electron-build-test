@@ -27,12 +27,14 @@
   "build": {
     "appId": "com.quantconnect.leanux",
     "copyright": "Copyright © 2019 QuantConnect",
+    "productName": "Skylight",
     "directories": {
       "output": "release"
     },
     "win": {
     "target": "NSIS",
     "icon": "images/icon.png",
+    "sign": "./win-sign.js",
     "publish": {
       "provider": "s3",
       "bucket": "skylight.quantconnect.com",
