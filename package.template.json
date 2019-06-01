@@ -1,15 +1,15 @@
 {
-  "name": "electron",
-  "version": "0.0.12",
+  "name": "electron-quick-start",
+  "version": "0.1.0",
   "description": "packaging&auto-update",
   "main": "main.js",
-    "scripts": {
+  "scripts": {
     "start": "electron .",
     "build": "build",
     "publish-win": "build --win --publish always",
     "publish-mac": "build --mac --publish always",
     "publish-linux": "build --linux --publish always",
-    "publish": "build --linux --publish always"
+    "publish": "build --win --mac --linux --publish always"
   },
   "keywords": [
     "Electron",
@@ -42,7 +42,7 @@
         "acl": "public-read",
         "region": "us-east-1",
         "path": "/{{branch_name}}/win"
-        }
+    }
     },
     "mac": {
       "target": [
