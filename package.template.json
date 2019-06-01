@@ -1,6 +1,6 @@
 {
   "name": "electron-quick-start",
-  "version": "0.0.3",
+  "version": "0.0.0",
   "description": "packaging&auto-update",
   "main": "main.js",
   "scripts": {
@@ -33,6 +33,7 @@
     },
     "win": {
     "target": "NSIS",
+      "artifactName": "${productName}_v${version}.${ext}",
     "icon": "images/icon.png",
     "sign": "./win-sign.js",
     "publish": {
@@ -40,7 +41,7 @@
       "bucket": "skylight.quantconnect.com",
       "acl": "public-read",
       "region": "us-east-1",
-      "path": "/win"
+      "path": "/{{branch_name}}/win"
     }
     },
     "mac": {
@@ -48,24 +49,26 @@
         "dmg",
         "zip"
       ],
+      "artifactName": "${productName}_v${version}.${ext}",
       "icon": "images/icon.png",
       "publish": {
         "provider": "s3",
         "bucket": "skylight.quantconnect.com",
         "acl": "public-read",
         "region": "us-east-1",
-        "path": "/mac"
+        "path": "/{{branch_name}}/mac"
       }
     },
     "linux": {
       "target": "AppImage",
+      "artifactName": "${productName}_v${version}.${ext}",
       "icon": "images/icon.png",
       "publish": {
         "provider": "s3",
         "bucket": "skylight.quantconnect.com",
         "acl": "public-read",
         "region": "us-east-1",
-        "path": "/linux"
+        "path": "/{{branch_name}}/linux"
       }
     }
   },
