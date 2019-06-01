@@ -41,7 +41,7 @@
         "bucket": "skylight.quantconnect.com",
         "acl": "public-read",
         "region": "us-east-1",
-        "path": "{{branch_name}}/win"
+        "path": "/{{branch_name}}/win"
         }
     },
     "mac": {
@@ -56,7 +56,7 @@
         "bucket": "skylight.quantconnect.com",
         "acl": "public-read",
         "region": "us-east-1",
-        "path": "{{branch_name}}/mac"
+        "path": "/{{branch_name}}/mac"
       }
     },
     "linux": {
@@ -68,7 +68,7 @@
         "bucket": "skylight.quantconnect.com",
         "acl": "public-read",
         "region": "us-east-1",
-        "path": "{{branch_name}}/linux"
+        "path": "/{{branch_name}}/linux"
       }
     }
   },
